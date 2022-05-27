@@ -10,7 +10,9 @@ codigos de paises,nombres y nombre de moneda https://www.iban.com
 
 
 #Importante tener instalado 
-**pip install pandas
-pip install bs4
-pip install rquests
-pip install time
+```
+$pip install pandas
+$pip install bs4
+$pip install rquests
+$pip install time
+```
