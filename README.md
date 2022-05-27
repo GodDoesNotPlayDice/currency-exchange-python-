@@ -9,10 +9,10 @@ codigos de paises,nombres y nombre de moneda https://www.iban.com
 4) Salir, con 3 segundos de espera.
 
 
-#Importante tener instalado 
+##Importante tener instalado 
 ```
 $pip install pandas
 $pip install bs4
-$pip install rquests
+$pip install requests
 $pip install time
 ```
