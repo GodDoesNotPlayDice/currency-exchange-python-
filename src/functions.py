@@ -1,4 +1,3 @@
-import re
 import pandas as pd
 from bs4 import BeautifulSoup
 import requests as rq
@@ -101,9 +100,3 @@ def historial(from_,to_,valueActual,value,date_time,time,value_time):
         return f'Pais de: {currencysFormatter(country,0)[from_]} A Pais de destino: {currencysFormatter(country,0)[to_]},\n Valor Actual: {valueActual}, Valor converitido: {value}\n Actualizacion del valor: {value_time}\n Fecha y Hora de la conversion: {date_time}, {time}'
     except IndexError:
         return 'INDEX ERROR'
-
-def allcurrencysFormatter(flag1):
-    pass
-
-def value(value,cant):
-    pass

@@ -126,10 +126,3 @@ while close:
         estado = "VALUE ERROR (MENU - MAIN ) ingrese nuevamente un dato valido "
     except IndexError:
         estado = " (INDEX ERROR - MAIN ) ingrese nuevamente un dato valido "
-    
-
-
-
-
-
-    
