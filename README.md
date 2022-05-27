@@ -1,6 +1,6 @@
 # currency-exchange-python-
 Conversor de de dinero actualizado
-valores extraidos de https://www.xe.com
+valores extraidos de https://www.xe.com, 
 codigos de paises, nombres y nombre de moneda https://www.iban.com
 
 1) Extrae los paises con divisas
