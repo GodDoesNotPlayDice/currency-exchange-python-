@@ -60,11 +60,14 @@ while close:
                             while True:
                                 try:
                                     cantidad = float(input('Cantidad que desea convertir: '))
-                                    op = cantidad * float(value_)
-                                    result = f'{round(float((op)),2)} {paises_cod[indexTo_]}'
-                                    print(f"Cantidad convetida: {result}")
-                                    conversiones.append([historial(indexFrom_,indexTo_,valorActual,op,fecha(time),hora(time),fecha_valor)])
-                                    break
+                                    if cantidad < 0:
+                                        print('Valor no puede ser menor a 1')
+                                    else:
+                                        op = cantidad * float(value_)
+                                        result = f'{round(float((op)),2)} {paises_cod[indexTo_]}'
+                                        print(f"Cantidad convetida: {result}")
+                                        conversiones.append([historial(indexFrom_,indexTo_,valorActual,op,fecha(time),hora(time),fecha_valor)])
+                                        break
                                 except ValueError:
                                     print('CANTIDAD VALOR --porfavor ingresar un valor valido')
                             opc_aux = str(input('Desea otra operacion?\n1)Si\nX)No \ (X)Representa cualquier tecla\nOpcion: '))
@@ -90,15 +93,18 @@ while close:
                             while True:
                                 try:
                                     value_ = float(input(f'Cantidad de {from_}: '))
-                                    print('Cargando datos...')
-                                    big_currencys = ['USD', 'EUR', 'GBP', 'JPY', 'CNY', 'RUB', 'INR']
-                                    g_values = []
-                                    for i in big_currencys:
-                                        v = value_ * float(currency_comparing(from_,i))
-                                        g_values.append(f'Valor de {value_} {from_} es {round(v,2)} {i}')
-                                    for i in g_values:
-                                        print(i)
-                                    break
+                                    if value_ < 0:
+                                        print('Valor no puede ser menor a 1')
+                                    else:
+                                        print('Cargando datos...')
+                                        big_currencys = ['USD', 'EUR', 'GBP', 'JPY', 'CNY', 'RUB', 'INR']
+                                        g_values = []
+                                        for i in big_currencys:
+                                            v = value_ * float(currency_comparing(from_,i))
+                                            g_values.append(f'Valor de {value_} {from_} es {round(v,2)} {i}')
+                                        for i in g_values:
+                                            print(i)
+                                        break
                                 except ValueError:
                                     print('Ingresa un codigo valido')
                             opc_aux = str(input('Desea otra operacion?\n1)Si\nX)No \ (X)Representa cualquier tecla\nOpcion: '))
